@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Hina+Mincho&display=swap');
+body{
+    font-family: 'Hina Mincho', serif;
+    display: flex;
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+*{
+    box-sizing: border-box;
+}

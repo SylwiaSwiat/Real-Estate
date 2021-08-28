@@ -1,112 +1,129 @@
 @import url('https://fonts.googleapis.com/css2?family=Hina+Mincho&display=swap');
-body{
+
+body {
     font-family: 'Hina Mincho', serif;
     display: flex;
     margin: 0;
     min-height: 100vh;
+    background-color: rgba(10, 51, 104, 0.04);
 }
-*{
+
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
 }
-.container{
+
+.container {
     width: 100%;
     min-height: 100vh;
     margin: auto;
     background-color: rgba(255, 255, 255, 0.5);
 }
-header{
-   width: 100%;
-   min-height: 30px;
-   background-color:rgba(255, 255, 255, 0.26);
+
+header {
+    width: 100%;
+    min-height: 30px;
+    background-color: rgba(255, 255, 255, 0.26);
 }
-header .logo{
+
+header .logo {
     font-size: 18px;
     width: 20%;
-    
-    
-}
-header ul{
-display: flex;
-padding: 0.5rem 1rem;
-list-style: none;
-justify-content: center;
-align-items: center;
-flex-wrap: wrap;
-text-align: center;
-}
-header ul li{
-padding: 0.5rem 2.5rem;
-letter-spacing: 5px;
+
 
 }
-header ul li a{
-text-decoration: none;
-font-size: 18px;
-color: rgb(90, 9, 90);
-text-align: center;
+
+header ul {
+    display: flex;
+    padding: 0.5rem 1rem;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
 }
-header ul li a:hover{
-color: black;
+
+header ul li {
+    padding: 0.5rem 2.5rem;
+    letter-spacing: 5px;
+
 }
-header .menu{
+
+header ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: rgb(10, 51, 104);
+    text-align: center;
+}
+
+header ul li a:hover {
+    color: black;
+}
+
+header .menu {
     position: absolute;
     right: 20px;
-    top:40px;
+    top: 40px;
     cursor: pointer;
     text-align: center;
     padding: 2rem;
     display: none;
 }
-section{
+
+section {
     width: 100%;
     min-height: 100vh;
     background-image: url("house.jpg");
     background-size: cover;
 }
-section .banner{
+
+section .banner {
     width: 100%;
     position: relative;
 }
-.banner .thumb{
+
+.banner .thumb {
     width: 100%;
     height: 100%;
     position: relative;
 }
 
-.banner .text{
+.banner .text {
     width: 100%;
     height: 100%;
     position: absolute;
-    top:10rem;
-    left:0;
+    top: 10rem;
+    left: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     text-align: center;
 }
-.banner .text h2{
+
+.banner .text h2 {
     text-transform: uppercase;
     letter-spacing: 8px;
     font-size: 3rem;
     color: rgb(16, 72, 146);
     text-shadow: 1px -1px 0 white;
-    
+
 }
-.banner .text p{
+
+.banner .text p {
     font-size: 2rem;
     letter-spacing: 2px;
     margin-bottom: 3rem;
     color: rgb(10, 51, 104);
     text-shadow: 1px -1px 0 white;
 }
-.banner .text input{
+
+.banner .text input {
     border: none;
     border-radius: 1rem;
-    outline:none;
+    outline: none;
     height: 60px;
     width: 600px;
     text-align: center;
@@ -114,12 +131,14 @@ section .banner{
     color: rgb(10, 51, 104);
     font-size: 18px;
 }
-::placeholder{
-    color:rgb(10, 51, 104);
+
+::placeholder {
+    color: rgb(10, 51, 104);
 }
-.banner .text button{
+
+.banner .text button {
     height: 60px;
-    width:80px;
+    width: 80px;
     border: none;
     border-radius: 1rem;
     background-color: rgba(255, 255, 255, 0.7);
@@ -127,6 +146,91 @@ section .banner{
     font-size: 20px;
     cursor: pointer;
 }
-.banner .text button:hover{
-    box-shadow: rgb(10, 51, 104) 0px 0px 13px -7px;
+
+.banner .text button:hover {
+    box-shadow: rgb(10, 51, 104) 0px 0px 13px -7px inset;
+}
+
+#about {
+    width: 100%;
+    color: rgb(10, 51, 104);
+    flex-wrap: wrap;
+    margin: 10px;
+}
+
+#about .about {
+    display: flex;
+    padding-left: 4rem;
+    font-size: 32px;
+
+}
+
+#about .content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#about .content .thumb {
+    padding: 2rem 4rem 0.5rem 4rem;
+
+}
+
+#about h3 {
+    font-size: 20px;
+}
+
+.thumb-box {
+    flex: 1;
+    cursor: pointer;
+    box-shadow: 4px 5px 10px #ddd;
+    transition: 0.5s ease-in-out;
+    margin: 10px;
+}
+
+.thumb-box h3 {
+    padding: 0.5rem;
+}
+
+.thumb img {
+    display: flex;
+    max-width: 850px;
+}
+
+#about .text {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 4rem 0.5rem 6rem;
+    font-size: 22px;
+
+}
+
+#about .text h3 {
+
+    padding-bottom: 1rem;
+}
+
+#about .text p {
+    padding-left: 3.5rem;
+    padding-bottom: 3rem;
+}
+
+
+#about .text a {
+    padding-top: 4.5rem;
+    padding-left: 3.5rem;
+    text-decoration: none;
+    color: rgb(10, 51, 104);
+    font-size: 20px;
+}
+
+#about .text .fas {
+    padding-right: 2rem;
+
+}
+
+#about .text .fas:hover,
+h3:hover {
+    cursor: pointer;
+    color: rgb(160, 194, 221);
 }

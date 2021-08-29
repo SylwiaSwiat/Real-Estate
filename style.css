@@ -151,21 +151,24 @@ section .banner {
     box-shadow: rgb(10, 51, 104) 0px 0px 13px -7px inset;
 }
 
-#about {
+#about,
+#properties {
     width: 100%;
     color: rgb(10, 51, 104);
     flex-wrap: wrap;
     margin: 10px;
+    padding-top: 3rem;
 }
 
-#about .about {
+#about .about,
+#properties h2 {
     display: flex;
     padding-left: 4rem;
     font-size: 32px;
 
 }
 
-#about .content {
+.content {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -217,11 +220,15 @@ section .banner {
 
 
 #about .text a {
-    padding-top: 4.5rem;
-    padding-left: 3.5rem;
+    padding: 0.3rem;
     text-decoration: none;
-    color: rgb(10, 51, 104);
+    color: white;
+    background-color: rgb(16, 72, 146);
     font-size: 20px;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
 }
 
 #about .text .fas {
@@ -230,7 +237,58 @@ section .banner {
 }
 
 #about .text .fas:hover,
-h3:hover {
+h3:hover,
+a:hover {
     cursor: pointer;
     color: rgb(160, 194, 221);
+}
+
+#properties .content {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding: 2rem;
+}
+
+#properties .box {
+    padding: 2rem 2rem;
+    display: flex;
+    cursor: pointer;
+    box-shadow: 4px 5px 10px #ddd;
+    transition: 0.5s ease-in-out;
+    margin: 10px;
+    flex-direction: column;
+}
+
+#properties .box img {
+    display: flex;
+    max-width: 350px;
+}
+
+#properties h3 {
+    padding: 1rem 0;
+    font-size: 22px;
+}
+
+#properties .text {
+    font-size: 16px;
+}
+
+#properties span {
+    padding: 0 2rem 1rem 0;
+}
+
+#properties a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem 0;
+    border-radius: 1rem;
+    background-color: rgb(16, 72, 146);
+    color: white;
+    margin-top: 1.5rem;
+}
+
+#properties a:hover {
+    background-color: rgb(160, 194, 221);
 }

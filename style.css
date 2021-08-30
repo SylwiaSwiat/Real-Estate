@@ -5,7 +5,8 @@ body {
     display: flex;
     margin: 0;
     min-height: 100vh;
-    background-color: rgba(10, 51, 104, 0.04);
+    background-color: rgba(10, 51, 104, 0.1);
+
 }
 
 * {
@@ -53,7 +54,7 @@ header ul li {
 
 header ul li a {
     text-decoration: none;
-    font-size: 18px;
+    font-size: 20px;
     color: rgb(10, 51, 104);
     text-align: center;
 }
@@ -161,11 +162,11 @@ section .banner {
 }
 
 #about .about,
-#properties h2 {
+#properties h2,
+#agents h2 {
     display: flex;
     padding-left: 4rem;
     font-size: 32px;
-
 }
 
 .content {
@@ -243,14 +244,16 @@ a:hover {
     color: rgb(160, 194, 221);
 }
 
-#properties .content {
+#properties .content,
+#agents .content {
     display: flex;
     justify-content: center;
     flex-direction: row;
     padding: 2rem;
 }
 
-#properties .box {
+#properties .box,
+#agents .box {
     padding: 2rem 2rem;
     display: flex;
     cursor: pointer;
@@ -260,35 +263,48 @@ a:hover {
     flex-direction: column;
 }
 
-#properties .box img {
+#properties .box img,
+#agents .box img {
     display: flex;
     max-width: 350px;
+    align-self: center;
 }
 
-#properties h3 {
+#properties h3,
+#agents h3 {
     padding: 1rem 0;
     font-size: 22px;
 }
 
-#properties .text {
-    font-size: 16px;
+#properties .text,
+#agents .text {
+    font-size: 20px;
 }
 
 #properties span {
     padding: 0 2rem 1rem 0;
 }
 
-#properties a {
+#properties a,
+#agents a {
     text-decoration: none;
     display: flex;
     justify-content: center;
-    padding: 0.5rem 0;
+    padding: 0.5rem 0.5rem;
     border-radius: 1rem;
     background-color: rgb(16, 72, 146);
     color: white;
     margin-top: 1.5rem;
+    margin-right: 0.5rem;
 }
 
-#properties a:hover {
+#properties a:hover,
+#agents a:hover {
     background-color: rgb(160, 194, 221);
+}
+
+#agents .social {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }

@@ -5,8 +5,7 @@ body {
     display: flex;
     margin: 0;
     min-height: 100vh;
-    background-color: rgba(10, 51, 104, 0.1);
-
+    min-width: 100vw;
 }
 
 * {
@@ -26,13 +25,11 @@ body {
 header {
     width: 100%;
     min-height: 30px;
-    background-color: rgba(255, 255, 255, 0.26);
 }
 
 header .logo {
     font-size: 18px;
-    width: 20%;
-
+    padding-left: 1rem;
 
 }
 
@@ -153,17 +150,21 @@ section .banner {
 }
 
 #about,
-#properties {
+#properties,
+#reviews,
+#contact {
     width: 100%;
     color: rgb(10, 51, 104);
     flex-wrap: wrap;
     margin: 10px;
-    padding-top: 3rem;
+    padding-top: 1rem;
 }
 
 #about .about,
 #properties h2,
-#agents h2 {
+#agents h2,
+#reviews h2,
+#contact h2 {
     display: flex;
     padding-left: 4rem;
     font-size: 32px;
@@ -192,6 +193,12 @@ section .banner {
     margin: 10px;
 }
 
+.thumb-box:hover {
+    box-shadow: none;
+}
+
+
+
 .thumb-box h3 {
     padding: 0.5rem;
 }
@@ -203,9 +210,11 @@ section .banner {
 
 #about .text {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
-    padding: 3rem 4rem 0.5rem 6rem;
+    padding: 3rem 2rem 0.5rem 2rem;
     font-size: 22px;
+    max-width: 400px;
 
 }
 
@@ -215,8 +224,7 @@ section .banner {
 }
 
 #about .text p {
-    padding-left: 3.5rem;
-    padding-bottom: 3rem;
+    padding: 2rem 0;
 }
 
 
@@ -230,10 +238,19 @@ section .banner {
     display: flex;
     justify-content: center;
     margin-top: 2rem;
+    box-shadow: 4px 5px 10px #ddd;
+    transition: 0.5s ease-in-out;
 }
 
-#about .text .fas {
-    padding-right: 2rem;
+#about .text .social a {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: rgb(16, 72, 146);
+}
+
+#about .text .social a:hover {
+    color: rgb(160, 194, 221);
+    background-color: rgba(255, 255, 255, 0.5);
+
 
 }
 
@@ -245,17 +262,23 @@ a:hover {
 }
 
 #properties .content,
-#agents .content {
+#agents .content,
+#reviews .content,
+#contact .content {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     flex-direction: row;
     padding: 2rem;
 }
 
 #properties .box,
-#agents .box {
+#agents .box,
+#reviews .box {
+    max-width: 400px;
     padding: 2rem 2rem;
     display: flex;
+    flex-wrap: wrap;
     cursor: pointer;
     box-shadow: 4px 5px 10px #ddd;
     transition: 0.5s ease-in-out;
@@ -263,26 +286,61 @@ a:hover {
     flex-direction: column;
 }
 
+#contact .box {
+    padding: 2rem 20rem;
+    display: flex;
+    flex-wrap: wrap;
+    cursor: pointer;
+    box-shadow: 4px 5px 10px #ddd;
+    transition: 0.5s ease-in-out;
+    flex-direction: column;
+    align-content: center;
+    width: 100%;
+}
+
+#properties .box:hover,
+#agents .box:hover,
+#reviews .box:hover,
+#contact .box:hover {
+    box-shadow: none;
+}
+
 #properties .box img,
-#agents .box img {
+#agents .box img,
+#reviews .box img {
     display: flex;
     max-width: 350px;
     align-self: center;
 }
 
 #properties h3,
-#agents h3 {
+#agents h3,
+#reviews h3,
+#contact h3 {
     padding: 1rem 0;
     font-size: 22px;
+    width: 100%;
 }
+
 
 #properties .text,
-#agents .text {
+#agents .text,
+#reviews .text,
+#contact .text {
     font-size: 20px;
+    max-width: 100%;
+
 }
 
-#properties span {
-    padding: 0 2rem 1rem 0;
+#reviews .text p {
+    font-style: italic;
+    max-width: 100%;
+}
+
+#properties span,
+#contact span {
+    padding: 0rem 1rem 1rem 0;
+    color: rgb(16, 72, 146);
 }
 
 #properties a,
@@ -296,15 +354,61 @@ a:hover {
     color: white;
     margin-top: 1.5rem;
     margin-right: 0.5rem;
+    box-shadow: 4px 5px 10px #ddd;
+    transition: 0.5s ease-in-out;
 }
 
 #properties a:hover,
-#agents a:hover {
+#agents a:hover,
+#about .text a:hover {
     background-color: rgb(160, 194, 221);
+    transition: 0.3s ease-in-out;
 }
 
 #agents .social {
     display: flex;
     flex-direction: row;
     justify-content: center;
+}
+
+#contact form {
+    flex: 1;
+    min-width: 250px;
+    max-width: 600px;
+    padding: 2rem 4rem 2rem 1rem;
+}
+
+#contact form input,
+#contact form textarea,
+#contact form button {
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgb(16, 72, 146);
+    padding: 1rem 1rem 1rem 0;
+    color: rgb(10, 51, 104);
+    margin: 0.5rem;
+
+}
+
+#contact form button {
+    border-radius: 1rem;
+    color: white;
+    background-color: rgb(16, 72, 146);
+    width: 50%;
+    border: none;
+}
+
+#contact form input:focus,
+#contact form textarea:focus,
+#contact form button:focus {
+    border: 2px solid rgb(160, 194, 221);
+    box-shadow: 2px 2px 4px rgb(160, 194, 221);
+    transition: 0.5s;
+}
+
+#contact form button:hover {
+    background-color: rgb(160, 194, 221);
+    transition: 0.4s;
+    cursor: pointer;
 }

@@ -6,6 +6,7 @@ body {
     margin: 0;
     min-height: 100vh;
     min-width: 100vw;
+    background-color: #FFF1ED;
 }
 
 * {
@@ -19,40 +20,45 @@ body {
     width: 100%;
     min-height: 100vh;
     margin: auto;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: #FFF1ED;
 }
 
 header {
     width: 100%;
-    min-height: 30px;
-}
-
-header .logo {
-    font-size: 18px;
-    padding-left: 1rem;
-
-}
-
-header ul {
+    min-height: 125px;
+    background-color: #FFF1ED;
     display: flex;
     padding: 0.5rem 1rem;
-    list-style: none;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     text-align: center;
 }
 
+header .logo {
+    max-height: 200px;
+    max-width: 150px;
+    margin-bottom: 1rem;
+    margin-right: 6rem;
+}
+
+
+ul {
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+}
+
 header ul li {
     padding: 0.5rem 2.5rem;
-    letter-spacing: 5px;
+    letter-spacing: 2px;
 
 }
 
 header ul li a {
     text-decoration: none;
-    font-size: 20px;
-    color: rgb(10, 51, 104);
+    font-size: 22px;
+    color: rgb(117, 117, 117);
     text-align: center;
 }
 
@@ -73,7 +79,7 @@ header .menu {
 section {
     width: 100%;
     min-height: 100vh;
-    background-image: url("house.jpg");
+    background-image: url("sidekix-media-5O-KFVmKSjY-unsplash.jpg");
     background-size: cover;
 }
 
@@ -105,7 +111,7 @@ section .banner {
     text-transform: uppercase;
     letter-spacing: 8px;
     font-size: 3rem;
-    color: rgb(16, 72, 146);
+    color: #f87887;
     text-shadow: 1px -1px 0 white;
 
 }
@@ -114,8 +120,7 @@ section .banner {
     font-size: 2rem;
     letter-spacing: 2px;
     margin-bottom: 3rem;
-    color: rgb(10, 51, 104);
-    text-shadow: 1px -1px 0 white;
+    color: white;
 }
 
 .banner .text input {
@@ -126,12 +131,12 @@ section .banner {
     width: 600px;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.7);
-    color: rgb(10, 51, 104);
+    color: black;
     font-size: 18px;
 }
 
 ::placeholder {
-    color: rgb(10, 51, 104);
+    color: rgb(117, 117, 117);
 }
 
 .banner .text button {
@@ -140,13 +145,13 @@ section .banner {
     border: none;
     border-radius: 1rem;
     background-color: rgba(255, 255, 255, 0.7);
-    color: rgb(10, 51, 104);
+    color: rgb(117, 117, 117);
     font-size: 20px;
     cursor: pointer;
 }
 
 .banner .text button:hover {
-    box-shadow: rgb(10, 51, 104) 0px 0px 13px -7px inset;
+    box-shadow: #F9A7B0 0px 0px 13px -7px inset;
 }
 
 #about,
@@ -154,7 +159,7 @@ section .banner {
 #reviews,
 #contact {
     width: 100%;
-    color: rgb(10, 51, 104);
+    color: rgb(82, 80, 80);
     flex-wrap: wrap;
     margin: 10px;
     padding-top: 1rem;
@@ -213,28 +218,32 @@ section .banner {
     flex-wrap: wrap;
     flex-direction: column;
     padding: 3rem 2rem 0.5rem 2rem;
-    font-size: 22px;
-    max-width: 400px;
+    font-size: 24px;
+    max-width: 450px;
 
 }
 
 #about .text h3 {
-
-    padding-bottom: 1rem;
+    font-size: 20px;
+    padding-bottom: 4rem;
 }
 
-#about .text p {
-    padding: 2rem 0;
+#about .fas {
+    font-size: 30px;
 }
 
+#about .text .agent {
+    font-size: 20px;
+    padding: 0;
+}
 
 #about .text a {
     padding: 0.3rem;
     text-decoration: none;
     color: white;
-    background-color: rgb(16, 72, 146);
+    background-color: #f87887;
     font-size: 20px;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     display: flex;
     justify-content: center;
     margin-top: 2rem;
@@ -243,22 +252,22 @@ section .banner {
 }
 
 #about .text .social a {
-    background-color: rgba(255, 255, 255, 0.5);
-    color: rgb(16, 72, 146);
+    background-color: transparent;
+    color: #f87887;
+    box-shadow: none;
 }
 
 #about .text .social a:hover {
-    color: rgb(160, 194, 221);
-    background-color: rgba(255, 255, 255, 0.5);
-
-
+    color: #F9A7B0;
+    background-color: transparent;
 }
 
 #about .text .fas:hover,
 h3:hover,
 a:hover {
     cursor: pointer;
-    color: rgb(160, 194, 221);
+    color: #F9A7B0;
+    transition: 0.5s;
 }
 
 #properties .content,
@@ -340,7 +349,7 @@ a:hover {
 #properties span,
 #contact span {
     padding: 0rem 1rem 1rem 0;
-    color: rgb(16, 72, 146);
+    color: rgb(82, 80, 80);
 }
 
 #properties a,
@@ -349,8 +358,8 @@ a:hover {
     display: flex;
     justify-content: center;
     padding: 0.5rem 0.5rem;
-    border-radius: 1rem;
-    background-color: rgb(16, 72, 146);
+    border-radius: 0.5rem;
+    background-color: #f87887;
     color: white;
     margin-top: 1.5rem;
     margin-right: 0.5rem;
@@ -361,21 +370,44 @@ a:hover {
 #properties a:hover,
 #agents a:hover,
 #about .text a:hover {
-    background-color: rgb(160, 194, 221);
+    background-color: #F9A7B0;
     transition: 0.3s ease-in-out;
+}
+
+#properties .view {
+    background-color: transparent;
+    color: rgb(82, 80, 80);
+    box-shadow: none;
+    font-size: 20px;
+    margin: 0;
+    border: none;
+}
+
+#properties .view:hover {
+    background-color: transparent;
+    border-bottom: 1px solid #F9A7B0;
+    transition: 0.5s;
+    border-radius: 0%;
+    margin: 0 40rem;
 }
 
 #agents .social {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    padding-bottom: 1rem;
 }
 
 #contact form {
     flex: 1;
-    min-width: 250px;
+    min-width: 350px;
     max-width: 600px;
     padding: 2rem 4rem 2rem 1rem;
+}
+
+#contact .map {
+    flex: 1;
+    max-width: 600px;
 }
 
 #contact form input,
@@ -384,17 +416,18 @@ a:hover {
     width: 100%;
     outline: none;
     border: none;
-    border-bottom: 1px solid rgb(16, 72, 146);
+    border-bottom: 1px solid #f87887;
     padding: 1rem 1rem 1rem 0;
-    color: rgb(10, 51, 104);
+    color: rgb(82, 80, 80);
     margin: 0.5rem;
+    background-color: transparent;
 
 }
 
 #contact form button {
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     color: white;
-    background-color: rgb(16, 72, 146);
+    background-color: #f87887;
     width: 50%;
     border: none;
 }
@@ -402,13 +435,23 @@ a:hover {
 #contact form input:focus,
 #contact form textarea:focus,
 #contact form button:focus {
-    border: 2px solid rgb(160, 194, 221);
-    box-shadow: 2px 2px 4px rgb(160, 194, 221);
+    border: 2px solid #F9A7B0;
+    box-shadow: 2px 2px 4px #F9A7B0;
     transition: 0.5s;
 }
 
 #contact form button:hover {
-    background-color: rgb(160, 194, 221);
+    background-color: #F9A7B0;
     transition: 0.4s;
+    cursor: pointer;
+}
+
+#contact a {
+    color: #f87887;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    color: #F9A7B0;
     cursor: pointer;
 }

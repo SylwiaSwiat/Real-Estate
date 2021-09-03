@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="script.js"></script>
+    <script src="script.js" async></script>
     
     <script src="https://kit.fontawesome.com/13f87f03f4.js" crossorigin="anonymous"></script>
     <title>Real Estate</title>
@@ -183,14 +183,16 @@
                 <img src="/abbe-sublett-nxZDMUQhN4o-unsplash.jpg" alt="">
                 <h3>Company Name</h3>
             </div>
-                </div>
                 <div class="text">
                     
                     <h3><i class="fas fa-home"></i>  Properties for buy and sale all over the world</h3>
                     <h3><i class="fas fa-star"></i>  High rated agents with experience </h3>
                     <h3><i class="fas fa-user-shield"></i>  Easy and safe</h3>
-                    <a href="#">Read More</a>
+                    <p class="more-about">More info</p>
+                    <button id="more-about-btn">Read More</button>
                 </div>
+                </div>
+                
                         </div>
                         <div id="agents">
                             <h2>Our Agents</h2>
@@ -291,10 +293,98 @@
         </div>
         
         <footer>
-
+<div class="content">
+    <div class="box">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#properties">Properties</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#agents">Agents</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#" class="active">Register/Login</a></li>
+        </ul>
+    </div>
+    <div class="box" id="mini-info">
+        <p>Description</p>
+        <h5>Trusted by more that 1000 people</h5>
+    </div>
+    <div class="contact-box">
+        <div id="location" class="box">
+        <h5><i class="fa fa-map-marker">  Location</i></h5>
+        <a href="#contact">Malinowa 4, Warszawa</a>
+        </div>
+        <div id="phone" class="box">
+            <h5><i class="fa fa-phone"></i>  Phone</h5>
+        <a href="tel:+48 123 456 789">+48 123 456 789</a>
+        </div>
+        <div id="mail" class="box">
+            <h5><i class="fas fa-envelope"></i>  Email</h5>
+            <a href="mailto:sylwiaswiat2@wp.pl">example@wp.pl</a>
+        </div>
+        
+    </div>
+    <div class="box">
+        <div class="social">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-google-plus-g"></i></a>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <p>&copy; 2021 Real Estate | Designed by Sylwia</p>
+</div>
         </footer>
         <div class="login-container">
-
+<i class="fa fa-times" id="closeBtn"></i>
+<div class="login-box">
+    <form>
+        <h2>Login</h2>
+        <label for="log-mail">
+            <input type="email" name="mail" id="log-mail" placeholder="Enter Your Email" required>
+        </label>
+        <label for="log-pass">
+            <input type="password" name="password" id="log-pass" placeholder="Enter Your Password" required>
+        </label>
+        <label for="remember">
+            <input type="checkbox" name="remember" id="log-remember"> Remember me
+        </label>
+        <button type="submit" class="btn" id="login">Login</button>
+        <p>Or Login with</p>
+        <button class="btn" id="fb"><i class="fa fa-facebook"></i>Facebook</button>
+        <button class="btn" id="google"><i class="fab fa-google"></i>Google</button>
+        <p>Not a member? <a href="#">Register now</a></p>
+    </form>
+</div>
+<div class="login-box hidden" id="register">
+    <form>
+        <h2>Register</h2>
+        <label for="reg-name">
+            <input type="text" name="name" id="user-name" placeholder="Enter Your username" required>
+        </label>
+        <label for="reg-mail">
+            <input type="email" name="mail" id="reg-mail" placeholder="Enter Your Email" required>
+        </label>
+        <label for="reg-pass">
+            <input type="password" name="password" id="reg-pass" placeholder="Enter Your Password" required>
+        </label>
+        <label for="reg-pass">
+            <input type="password" name="password" id="reg-pass2" placeholder="Confirm Your Password" required>
+        </label>
+        <label for="privacy">
+            <input type="checkbox" name="privacy" id="privacy" required> I accept Terms of User and Privacy Policy
+        </label>
+        <button type="submit" class="btn" id="login">Login</button>
+        <p>Or Login with</p>
+        <button class="btn" id="reg">Register</button>
+        <p>Already have an account? <a href="#">Login</a></p>
+    </form>
+</div>
         </div>
     </div>
 </body>

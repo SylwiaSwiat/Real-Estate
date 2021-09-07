@@ -619,7 +619,7 @@ footer .social i {
     position: fixed;
     top: 0;
     left: 0;
-    background-image: url('sidekix-media-5O-KFVmKSjY-unsplash.jpg');
+    background-image: url('/images/sidekix-media-5O-KFVmKSjY-unsplash.jpg');
     background-size: cover;
     z-index: 99;
     clip-path: circle(0 at 50% 50%);

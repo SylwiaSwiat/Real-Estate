@@ -88,7 +88,7 @@ header .menu {
 section {
     width: 100%;
     min-height: 100vh;
-    background-image: url("sidekix-media-5O-KFVmKSjY-unsplash.jpg");
+    background-image: url("/images/sidekix-media-5O-KFVmKSjY-unsplash.jpg");
     background-size: cover;
 }
 

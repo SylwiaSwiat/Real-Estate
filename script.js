@@ -17,6 +17,8 @@ const loginBtn = document.querySelector('#loginBtn')
 const registerBtn = document.querySelector('#registerBtn')
 const log = document.querySelector('#log')
 const reg = document.querySelector('#register')
+const menuToggle = document.querySelectorAll('header .menu')
+const menu = document.querySelector('header ul')
 
 
 moreAboutBtn.addEventListener('click', moreInfo)
@@ -56,3 +58,9 @@ const regLog = ()=>{
 }
 registerBtn.addEventListener('click', regLog)
 loginBtn.addEventListener('click', regLog)
+
+menuToggle.forEach(item =>{
+    item.addEventListener('click', ()=>{
+        menu.classList.toggle('menu-toggle')
+    })
+})

@@ -19,14 +19,15 @@ const log = document.querySelector('#log')
 const reg = document.querySelector('#register')
 const menuToggle = document.querySelectorAll('header .menu')
 const menu = document.querySelector('header ul')
+const menuElements = document.querySelectorAll('header ul li')
 
 
 moreAboutBtn.addEventListener('click', moreInfo)
 
 function moreInfo(){
     moreAbout.classList.toggle('more-about')
-    if(moreAbout.className==='more-about') moreAboutBtn.innerHTML='Read More'
-else {moreAboutBtn.innerHTML='Read Less'}}
+    moreAbout.className==='more-about' ? moreAboutBtn.innerHTML='Read More' : moreAboutBtn.innerHTML='Read Less'
+}
 
 viewAllBtn.addEventListener('click', function(){
     allProperty1.classList.remove('hide1')
@@ -35,6 +36,7 @@ viewAllBtn.addEventListener('click', function(){
     allProperty1.classList.add('box')
     allProperty2.classList.add('box')
     allProperty3.classList.add('box')
+    viewAllBtn.style.display= `none`
 })
 
 agent1btn.addEventListener('click', function(){
@@ -59,8 +61,7 @@ const regLog = ()=>{
 registerBtn.addEventListener('click', regLog)
 loginBtn.addEventListener('click', regLog)
 
-menuToggle.forEach(item =>{
-    item.addEventListener('click', ()=>{
-        menu.classList.toggle('menu-toggle')
-    })
-})
+const toggleMenu = () => menu.classList.toggle('menu-toggle')
+
+menuToggle.forEach(item => item.addEventListener('click', toggleMenu))
+menuElements.forEach(item=> item.addEventListener('click', toggleMenu))

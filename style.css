@@ -434,8 +434,8 @@ a:hover,
     font-weight: bold;
 }
 
-#properties a,
-#agents a {
+#properties button,
+#agents button {
     text-decoration: none;
     display: flex;
     justify-content: center;
@@ -447,13 +447,19 @@ a:hover,
     margin-right: 0.5rem;
     box-shadow: 4px 5px 10px #ddd;
     transition: 0.5s ease-in-out;
+    border: none;
+    font-family: 'Hina Mincho',
+        serif;
+    font-size: 20px;
+    width: 100%;
 }
 
-#properties a:hover,
-#agents a:hover,
+#properties button:hover,
+#agents button:hover,
 #about .text a:hover {
     color: #F9A7B0;
     transition: 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 #properties .view {
@@ -846,6 +852,7 @@ footer .social i {
         width: 250px;
         height: 500px;
     }
+
 }
 
 @media all and (max-height:500px) {
